@@ -4,6 +4,7 @@ package testpackage;
  * https://www.cnblogs.com/yejg1212/p/3270152.html
  * 关于Class.getResource和ClassLoader.getResource的路径问题
 **/
+
 public class TestMainClassLoader {
 	public static void main(String[] args) {
 		TestMainClassLoader t = new TestMainClassLoader();
