@@ -2,6 +2,11 @@ package base.bigDecimal;
 
 import java.math.BigDecimal;
 
+/**
+ * https://blog.csdn.net/h4x0r_007/article/details/45171141
+ * BigDecimal除法精确计算及坑点
+ * 
+ */
 public class TestDecimal {
 
 	public static void main(String[] args) {
@@ -18,5 +23,9 @@ public class TestDecimal {
 		System.out.println(BigDecimal.TEN);
 		System.out.println(BigDecimal.ONE);
 		System.out.println(BigDecimal.ZERO);
+		
+		BigDecimal num1 = new BigDecimal("1");
+//		System.out.println("坑点写法2："+num1.divide(new BigDecimal("3")).setScale(2, BigDecimal.ROUND_DOWN));  
+        System.out.println("正确写法：" +num1.divide(new BigDecimal("3"), 2, BigDecimal.ROUND_HALF_DOWN));  
 	}
 }

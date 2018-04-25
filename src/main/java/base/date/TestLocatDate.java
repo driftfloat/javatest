@@ -17,6 +17,7 @@ public class TestLocatDate {
 		System.out.println(now);
 		now = LocalDateTime.now().toString().replace(":", "").substring(0, 17);
 		System.out.println(now);
+		System.out.println(LocalDateTime.now().toString().replace("T", " ").substring(0, 19));
 	}
 
 }
