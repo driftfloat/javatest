@@ -234,7 +234,7 @@ public class ExportExcel<T> {
         dataset.add(new Student(20000002, "李四", 24, false, new Date()));
         dataset.add(new Student(30000003, "王五", 22, true, new Date()));
         
-        OutputStream out = new FileOutputStream("E://student.xls");
+        OutputStream out = new FileOutputStream("t://student.xls");
         ex.exportExcel(headers, dataset, out);
         out.close();
     }
@@ -260,7 +260,7 @@ public class ExportExcel<T> {
         dataset2.add(new Book(5, "c#入门", "leno", 300.33f, "1234567",
                 "汤春秀出版社", buf));
        
-        OutputStream out2 = new FileOutputStream("E://book.xls");
+        OutputStream out2 = new FileOutputStream("t://book.xls");
         ex2.exportExcel(headers2, dataset2, out2);
         out2.close();
     }
