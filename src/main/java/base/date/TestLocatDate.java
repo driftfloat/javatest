@@ -20,6 +20,7 @@ public class TestLocatDate {
 		System.out.println(LocalDateTime.now().toString().replace("T", " ").substring(0, 19));
 		System.out.println(LocalDate.now().getYear());
 		System.out.println(LocalDate.now().getMonthValue());
+		System.out.println(LocalDate.now().getMonth());
 	}
 
 }
