@@ -13,6 +13,7 @@ public class Test {
 		System.out.println(s);
 		OutputStreamWriter ow;
 		ArrayList l;
+//		String s = "/$";
 
 		String[] elementData = { "", "" };
 		elementData = new String[11];

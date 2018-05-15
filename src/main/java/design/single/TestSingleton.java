@@ -11,5 +11,8 @@ public class TestSingleton {
 		System.out.println(Singleton3.getInstance());
 		System.out.println(Singleton4.getInstance());
 		System.out.println(Singleton4.getInstance());
+		
+		System.out.println(SingletonEnum.INSTANCE.hashCode());
+		System.out.println(SingletonEnum.INSTANCE.hashCode());
 	}
 }
