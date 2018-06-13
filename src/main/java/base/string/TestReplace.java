@@ -11,6 +11,7 @@ public class TestReplace {
 		
 		v="J:\\baidu\\df6\\411517\\mp3\\01.hotel califonia-joe walsh & don felder(eagles).mp3";
 		System.out.println(v.replace(a, b));
+		String[] a2 = {"",""};
 	}
 
 }

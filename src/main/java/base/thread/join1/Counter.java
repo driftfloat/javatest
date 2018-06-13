@@ -1,4 +1,4 @@
-package base.thread;
+package base.thread.join1;
 
 /*
  * http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html
@@ -15,15 +15,17 @@ public class Counter {
 		count++;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws Exception{
+		Thread threads[]=new Thread[1000];
 		// 同时启动1000个线程，去进行i++计算，看看实际结果
 		for (int i = 0; i < 1000; i++) {
-			new Thread(new Runnable() {
+			threads[i]= new Thread(new Runnable() {
 				@Override
 				public void run() {
 					Counter.inc();
 				}
-			}).start();
+			});
+			threads[i].start();
 		}
 		// 这里每次运行的值都有可能不同,可能为1000
 		System.out.println("运行结果:Counter.count=" + Counter.count);

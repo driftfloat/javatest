@@ -1,4 +1,4 @@
-package base.thread;
+package base.thread.join1;
 
 /*
  * http://www.cnblogs.com/aigongsi/archive/2012/04/01/2429166.html
