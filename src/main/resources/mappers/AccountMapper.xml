@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.pmo.dashboard.dao.AccountMapper" >
-  <resultMap id="BaseResultMap" type="com.pmo.dashboard.entity.Account" >
+<mapper namespace="spring.ch9.dao.AccountMapper" >
+  <resultMap id="BaseResultMap" type="spring.ch9.entity.Account" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="accountname" property="accountname" jdbcType="VARCHAR" />
     <result column="money" property="money" jdbcType="INTEGER" />
@@ -19,13 +19,13 @@
     delete from account
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.pmo.dashboard.entity.Account" >
+  <insert id="insert" parameterType="spring.ch9.entity.Account" >
     insert into account (id, accountname, money
       )
     values (#{id,jdbcType=INTEGER}, #{accountname,jdbcType=VARCHAR}, #{money,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.pmo.dashboard.entity.Account" >
+  <insert id="insertSelective" parameterType="spring.ch9.entity.Account" >
     insert into account
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -50,7 +50,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.pmo.dashboard.entity.Account" >
+  <update id="updateByPrimaryKeySelective" parameterType="spring.ch9.entity.Account" >
     update account
     <set >
       <if test="accountname != null" >
@@ -62,7 +62,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.pmo.dashboard.entity.Account" >
+  <update id="updateByPrimaryKey" parameterType="spring.ch9.entity.Account" >
     update account
     set accountname = #{accountname,jdbcType=VARCHAR},
       money = #{money,jdbcType=INTEGER}

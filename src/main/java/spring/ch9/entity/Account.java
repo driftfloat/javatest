@@ -30,4 +30,10 @@ public class Account {
     public void setMoney(Integer money) {
         this.money = money;
     }
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", accountname=" + accountname + ", money=" + money + "]";
+	}
+    
 }

@@ -23,29 +23,37 @@
     </bean>
 
     <!-- dataSource configer -->
-    <bean id="sampleDataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="${jdbc.driver}" />
+<!--     <bean id="sampleDataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
+<!--         <property name="driverClassName" value="${jdbc.driver}" /> -->
+<!--         <property name="url" value="${jdbc.url}" /> -->
+<!--         <property name="username" value="${jdbc.username}" /> -->
+<!--         <property name="password" value="${jdbc.password}" /> -->
+<!--  		<property name="maxWait" value="${jdbc.maxWait}" /> -->
+<!--     </bean> -->
+    
+    <bean name="sampleDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	  	<property name="driverClassName" value="${jdbc.driver}" />
         <property name="url" value="${jdbc.url}" />
         <property name="username" value="${jdbc.username}" />
         <property name="password" value="${jdbc.password}" />
- 		<property name="maxWait" value="${jdbc.maxWait}" />
-    </bean>
+	</bean>
 
     <!-- reference mybatis config file，scan mapper dir -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
     	<property name="dataSource" ref="sampleDataSource"/>
+    	<property name="typeAliasesPackage" value="spring.ch9.entity"/>
     	<property name="mapperLocations" value="classpath:mappers/*.xml"/>
-		<property name="plugins">
-		    <array>
-		      <bean class="com.github.pagehelper.PageHelper">
-		        <property name="properties">
-		          <value>
-		            dialect=mysql
-		          </value>
-		        </property>
-		      </bean>
-		    </array>
-		</property>
+<!-- 		<property name="plugins"> -->
+<!-- 		    <array> -->
+<!-- 		      <bean class="com.github.pagehelper.PageHelper"> -->
+<!-- 		        <property name="properties"> -->
+<!-- 		          <value> -->
+<!-- 		            dialect=mysql -->
+<!-- 		          </value> -->
+<!-- 		        </property> -->
+<!-- 		      </bean> -->
+<!-- 		    </array> -->
+<!-- 		</property> -->
     </bean>
 
     <!-- spring and mybatis integration，scan dao package -->
