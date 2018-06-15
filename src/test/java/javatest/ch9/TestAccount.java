@@ -17,18 +17,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import spring.ch9.entity.Account;
 import spring.ch9.service.AccountService;
 
-/**
- * 
- * @author Administrator
- * http://www.itkeyword.com/doc/4402048923660866x475/how-to-configure-log4j-in-spring-for-mybatis-sql-queries  
- * 使用 log4j ，而不是 log-back
- */
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
 		"classpath:spring-ch9.xml"
 		})
-//@WebAppConfiguration
 public class TestAccount {
 	private Log log = LogFactory.getLog(TestAccount.class);
 	

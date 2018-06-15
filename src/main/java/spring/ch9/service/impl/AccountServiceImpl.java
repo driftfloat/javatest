@@ -1,6 +1,7 @@
 package spring.ch9.service.impl;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class AccountServiceImpl implements AccountService {
 	private AccountMapper accountMapper;
 	
 	@Override
+	@Transactional
 	public boolean transfet(Account a, Account b, int v) {
 		a.setMoney(a.getMoney() - v);
 		accountMapper.updateByPrimaryKeySelective(a);
