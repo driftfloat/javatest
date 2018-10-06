@@ -27,14 +27,15 @@ public class ExecutorExample {
 		this.executor = executor;
 	}
 	public void executeTasks() {
-		for(int i=0;i<6;i++) {
+		int i=0;
+//		for(int i=0;i<6;i++) {
 			executor.execute(new SimpleTask("task"+i));
-		}
+//		}
 	}
 
 	public static void main(String[] args) {
 		ExecutorExample ee = new ExecutorExample();
-		ee.setExecutor(Executors.newFixedThreadPool(3));
+		ee.setExecutor(Executors.newCachedThreadPool());
 		ee.executeTasks();
 	}
 }
