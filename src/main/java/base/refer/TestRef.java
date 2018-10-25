@@ -27,6 +27,8 @@ public class TestRef {
 class Foo { 
     private String msg; 
 
+    public Foo() {}
+    
     public Foo(String msg) { 
         this.msg = msg; 
     } 
