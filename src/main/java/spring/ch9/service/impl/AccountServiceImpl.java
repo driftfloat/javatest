@@ -1,9 +1,9 @@
 package spring.ch9.service.impl;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import spring.ch9.dao.AccountMapper;
 import spring.ch9.entity.Account;

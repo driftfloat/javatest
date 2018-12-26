@@ -12,9 +12,9 @@ public class Foo<T extends  List> {
    }  
     
     public void test(List<? extends Fruit> list){ 
-    	   list.add(new Fruit("f")); 
-    	   list.add(new Pear("p"));
-    	   list.add(new Apple("a")); 
+//    	   list.add(new Fruit("f")); 
+//    	   list.add(new Pear("p"));
+//    	   list.add(new Apple("a")); 
     	}
 
 } 
