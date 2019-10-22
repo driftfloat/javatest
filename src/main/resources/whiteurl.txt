@@ -20,3 +20,4 @@
 /api/order/totalAmount
 /account/ent/register
 /ent/account/isLogin
+/api/ent/member/updatePhonto

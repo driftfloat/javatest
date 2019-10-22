@@ -172,6 +172,9 @@ public class AESOperator {
 	public static void encryptLine()throws Exception {
 		String file = "t:/a.txt";
 		Path path = Paths.get(file);
+		if(!Files.exists(path)){
+			path = Paths.get("./a.txt");
+		}
 		List<String> lines = Files.readAllLines(path);
 		lines.forEach(str -> System.out.println(str+"\t"+AESOperator.getInstance().encrypt(str)));
 	}
