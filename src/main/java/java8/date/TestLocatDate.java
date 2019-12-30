@@ -1,8 +1,9 @@
-package base.date;
+package java8.date;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 
 public class TestLocatDate {
 
@@ -12,6 +13,7 @@ public class TestLocatDate {
 		LocalDateTime today = LocalDateTime.now();
 		System.out.println(date);		//	2018-10-24
 		System.out.println(time);		//	12:06:54.816
+		System.out.println(LocalDate.now()+" "+LocalTime.now().truncatedTo(ChronoUnit.SECONDS));
 		System.out.println(today);		//	2018-10-24T12:06:54.816
 		String now = LocalDateTime.now().toString().replace(":", "");
 		System.out.println(now);		//	2018-10-24T120654.817
